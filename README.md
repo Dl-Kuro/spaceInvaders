@@ -62,7 +62,7 @@ Aucun
 
 ### Sprints et fonctionnalités réalisées 
 
-#### Fonctionnalité n°2 : Déplacer un vaisseau dans l'espace de jeu (fini)
+#### Fonctionnalité n°2 : Déplacer un vaisseau dans l'espace de jeu (en-cours)
 
 - Etape n°1 : Positionner un nouveau vanisseau avec une dimension donnée 
 
@@ -85,6 +85,40 @@ Fonctionnalité n°2
 
 ### Difficultés rencontrées 
 Etape n°2
+
+### Remarques diverses
+Aucun
+
+-------------
+
+## Semaine n°3 : du 03 mai au 08 mai <a id="semaine3"></a>
+
+
+### Sprints et fonctionnalités réalisées 
+
+#### Fonctionnalité n°2 : Déplacer un vaisseau dans l'espace de jeu (fini)
+
+- Etape n°3 : Déplacer un vaisseau vers la droite en tenant compte de sa dimension
+
+- Etape n°4 : Déplacer un vaisseau vers la gauche en tenant compte de sa dimension   
+
+
+### Fonctionnalité en cours d’implémentation : 
+Fonctionnalité n°2
+
+
+### Diagramme de classes 
+
+![Diagrammes de classes de la semaine 3](img/DiagrammeClasses_Semaine3.png)
+
+
+### Nuage de mots du projet spaceinvaders
+
+ ![Nuage de mots de la semaine 3](img/NuageMots_Semaine3.png)
+
+
+### Difficultés rencontrées 
+Aucun
 
 ### Remarques diverses
 Aucun
