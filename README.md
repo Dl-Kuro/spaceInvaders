@@ -46,7 +46,6 @@ Aucune
 
 ### Nuage de mots du projet spaceinvaders (séance n°1)  
 
- 
 ![Nuage de mots de la semaine 1](NuageMots_Semaine1.png)
 
 
@@ -76,12 +75,12 @@ Fonctionnalité n°2
 
 ### Diagramme de classes 
 
+![Diagrammes de classes de la semaine 2](DiagrammeClasses_Semaine2.png)
 
 
 ### Nuage de mots du projet spaceinvaders
 
- 
-
+ ![Nuage de mots de la semaine 2](NuageMots_Semaine2.png)
 
 
 ### Difficultés rencontrées 
