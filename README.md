@@ -104,7 +104,7 @@ Aucun
 
 
 ### Fonctionnalité en cours d’implémentation : 
-Fonctionnalité n°2
+Aucune
 
 
 ### Diagramme de classes 
