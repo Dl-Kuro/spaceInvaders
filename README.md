@@ -78,7 +78,7 @@ Fonctionnalité n°2
 
 
 
-### Nuage de mots du projet spaceinvaders (séance n°1)  
+### Nuage de mots du projet spaceinvaders
 
  
 
