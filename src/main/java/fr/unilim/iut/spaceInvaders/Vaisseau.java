@@ -27,7 +27,7 @@ public class Vaisseau {
 	}
 
 	private boolean estAbscisseCouverte(int x) {
-		return (this.x<=x) && (x<=this.x+this.longueur-1);
+		return (abscisseLaPlusAGauche()<=x) && (x<=abscisseLaPlusADroite());
 	}
 	
 	public void seDeplacerVersLaDroite() {
@@ -38,6 +38,10 @@ public class Vaisseau {
 	}
 	
 	public int abscisseLaPlusADroite() {
+        return this.x+this.longueur-1;
+	}
+	
+	public int abscisseLaPlusAGauche() {
         return this.x;
 	}
 	
