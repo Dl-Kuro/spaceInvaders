@@ -36,7 +36,7 @@ import fr.unilim.iut.spaceInvaders.utils.HorsEspaceJeuException;
 	   @Test
 		public void test_unNouveauVaisseauEstCorrectementPositionneDansEspaceJeu() {
 			SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
-			spaceinvaders.positionnerUnNouveauVaisseau(1,1,7,9);
+			spaceinvaders.positionnerUnNouveauVaisseau(7,9);
 			assertEquals("" + 
 			"...............\n" + 
 			"...............\n" +
@@ -86,7 +86,7 @@ import fr.unilim.iut.spaceInvaders.utils.HorsEspaceJeuException;
 	   @Test
 		public void test_VaisseauAvance_DeplacerVaisseauVersLaDroite() {
 			
-			spaceinvaders.positionnerUnNouveauVaisseau(1,1,7,9);
+			spaceinvaders.positionnerUnNouveauVaisseau(7,9);
 
 			spaceinvaders.deplacerVaisseauVersLaDroite();
 			
@@ -106,7 +106,7 @@ import fr.unilim.iut.spaceInvaders.utils.HorsEspaceJeuException;
 	   @Test
 		public void test_VaisseauImmobile_DeplacerVaisseauVersLaDroite() {
 			
-			spaceinvaders.positionnerUnNouveauVaisseau(1,1,14,9);
+			spaceinvaders.positionnerUnNouveauVaisseau(14,9);
 
 			spaceinvaders.deplacerVaisseauVersLaDroite();
 			
@@ -126,7 +126,7 @@ import fr.unilim.iut.spaceInvaders.utils.HorsEspaceJeuException;
 	   @Test
 		public void test_VaisseauAvance_DeplacerVaisseauVersLaGauche() {
 			
-			spaceinvaders.positionnerUnNouveauVaisseau(1,1,7,9);
+			spaceinvaders.positionnerUnNouveauVaisseau(7,9);
 
 			spaceinvaders.deplacerVaisseauVersLaGauche();
 			
@@ -146,7 +146,7 @@ import fr.unilim.iut.spaceInvaders.utils.HorsEspaceJeuException;
 	   @Test
 		public void test_VaisseauImmobile_DeplacerVaisseauVersLaGauche() {
 			
-			spaceinvaders.positionnerUnNouveauVaisseau(1,1,0,9);
+			spaceinvaders.positionnerUnNouveauVaisseau(0,9);
 
 			spaceinvaders.deplacerVaisseauVersLaGauche();
 			
