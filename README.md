@@ -85,7 +85,7 @@ Fonctionnalité n°2
 
 
 ### Difficultés rencontrées 
-Aucune
+Etape n°2
 
 ### Remarques diverses
 Aucun
