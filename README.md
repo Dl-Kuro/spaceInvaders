@@ -1,6 +1,8 @@
 # Space-Invaders
 
 - [Semaine n°1 : du 26 avril au 01 mai](#semaine1)  
+- [Semaine n°2 : du 03 mai au 08 mai](#semaine2)
+- [Semaine n°3 : du 17 mai au 22 mai](#semaine3)
 - [Glossaire](#glossaire)
 
 
@@ -16,7 +18,7 @@
 Un espace de jeu est créé aux dimensions données (2D) 
 Cet espace de jeu est vide
 
--  Story n°2 : Positionner un nouveau vaisseau dans l’espace de jeu  
+- Story n°2 : Positionner un nouveau vaisseau dans l’espace de jeu  
 Un nouveau vaisseau est créé
 Le vaisseau est positionné aux coordonnées transmises
 Si un nouveau vaisseau essaye d’être positionné en dehors des limites de l’espace jeu, alors une exception devra être levée.
@@ -50,6 +52,40 @@ Aucune
 
 ### Difficultés rencontrées 
 Aucune
+
+### Remarques diverses
+Aucun
+
+-------------
+
+## Semaine n°2 : du 03 mai au 08 mai <a id="semaine2"></a>
+
+
+### Sprints et fonctionnalités réalisées 
+
+#### Fonctionnalité n°2 : Déplacer un vaisseau dans l'espace de jeu (fini)
+
+- Etape n°1 : Positionner un nouveau vanisseau avec une dimension donnée 
+
+- Etape n°2 : Positionner un nouveau vaisseau dans l’espace de jeu     
+
+
+### Fonctionnalité en cours d’implémentation : 
+Fonctionnalité n°2
+
+
+### Diagramme de classes 
+
+
+
+### Nuage de mots du projet spaceinvaders
+
+ 
+
+
+
+### Difficultés rencontrées 
+Etape n°2
 
 ### Remarques diverses
 Aucun
