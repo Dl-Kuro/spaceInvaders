@@ -3,6 +3,7 @@
 - [Semaine n°1 : du 26 avril au 01 mai](#semaine1)  
 - [Semaine n°2 : du 03 mai au 08 mai](#semaine2)
 - [Semaine n°3 : du 17 mai au 22 mai](#semaine3)
+- [Semaine n°4 : du 24 mai au 29 mai](#semaine3)
 - [Glossaire](#glossaire)
 
 
@@ -62,7 +63,7 @@ Aucun
 
 ### Sprints et fonctionnalités réalisées 
 
-#### Fonctionnalité n°2 : Déplacer un vaisseau dans l'espace de jeu (fini)
+#### Fonctionnalité n°2 : Déplacer un vaisseau dans l'espace de jeu (en-cours)
 
 - Etape n°1 : Positionner un nouveau vanisseau avec une dimension donnée 
 
@@ -91,6 +92,71 @@ Aucun
 
 -------------
 
+## Semaine n°3 : du 17 mai au 22 mai <a id="semaine3"></a>
+
+
+### Sprints et fonctionnalités réalisées 
+
+#### Fonctionnalité n°2 : Déplacer un vaisseau dans l'espace de jeu (fini)
+
+- Etape n°3 : Déplacer un vaisseau vers la droite en tenant compte de sa dimension
+
+- Etape n°4 : Déplacer un vaisseau vers la gauche en tenant compte de sa dimension   
+
+
+### Fonctionnalité en cours d’implémentation : 
+Aucune
+
+
+### Diagramme de classes 
+
+![Diagrammes de classes de la semaine 3](img/DiagrammeClasses_Semaine3.png)
+
+
+### Nuage de mots du projet spaceinvaders
+
+ ![Nuage de mots de la semaine 3](img/NuageMots_Semaine3.png)
+
+
+### Difficultés rencontrées 
+Aucun
+
+### Remarques diverses
+Aucun
+
+-------------
+
+## Semaine n°4 : du 24 mai au 29 mai <a id="semaine4"></a>
+
+
+### Sprints et fonctionnalités réalisées 
+
+#### Space Invaders - Spike : Prise en main et intégration d'un moteur graphique (en-cours)
+
+
+
+
+### Fonctionnalité en cours d’implémentation : 
+Aucune
+
+
+### Diagramme de classes 
+
+![Diagrammes de classes de la semaine 4](img/DiagrammeClasses_Semaine4.png)
+
+
+### Nuage de mots du projet spaceinvaders
+
+ ![Nuage de mots de la semaine 4](img/NuageMots_Semaine4.png)
+
+
+### Difficultés rencontrées 
+Aucun
+
+### Remarques diverses
+Aucun
+
+-------------
 
 ## Glossaire <a id="glossaire"></a>
 
