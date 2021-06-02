@@ -212,8 +212,12 @@ Aucun
 
 * **Envahisseur**  :  ennemi qui apparaît à l'écran, se déplace automatiquement et qui doit être détruit par un missile lancé depuis le vaisseau du joueur.
 
-
 * **Missile** :  projectile envoyé à la verticale par le vaisseau vers l'envahisseur dans le but de le détruire.
+
+* **Personnage** :  Etre fictif et virtuel, contrôlé ou non par le joueur, qui apparaît dans un jeu vidéo.
+
+* **Sprite**  :  Elément graphique qui peut se deplacer sur l'ecran. Identifie les personnages et les objets qui se superposent au fond d'ecran et qui se deplassent.
+
 
 La définition des termes métiers relatifs au projet doit se trouver dans le glossaire 
 Ce glossaire doit être compléter au fil des séances...
