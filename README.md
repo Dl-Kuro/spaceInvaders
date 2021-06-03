@@ -180,12 +180,18 @@ Aucun
 ### Sprints et fonctionnalités réalisées 
 
 #### Fonctionnalité n°5: Ajouter un envahisseur dans le jeu
+- Etape n°1 : Créer un envhisseur 
 
+- Etape n°2 : Positionner un nouvel envahisseur sur l'espace de jeu
+
+- Etape n°3 : Déplacer le nouvel envahisseur sur l'espace de jeu
+
+- Etape n°4 : Faire en sorte que l'envahisseur fasse des aller-retours entre la droite et la gauche
 
 
 
 ### Fonctionnalité en cours d’implémentation : 
-Aucune
+Fonctionnalité n°6
 
 
 ### Diagramme de classes 
