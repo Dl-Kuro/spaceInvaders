@@ -4,6 +4,10 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 import org.junit.Before;
 import org.junit.Test;
+
+import fr.unilim.iut.spaceInvaders.model.Dimension;
+import fr.unilim.iut.spaceInvaders.model.Position;
+import fr.unilim.iut.spaceInvaders.model.SpaceInvaders;
 import fr.unilim.iut.spaceInvaders.utils.*;
 
 public class SpaceInvadersTest {
@@ -29,23 +33,6 @@ public class SpaceInvadersTest {
 		    "...............\n" + 
 		    "...............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 	        }
-
-	   @Test
-		public void test_unNouveauVaisseauEstCorrectementPositionneDansEspaceJeu() {
-		   spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(1,1),new Position(7,9), 1);
-			assertEquals("" + 
-			"...............\n" + 
-			"...............\n" +
-			"...............\n" + 
-			"...............\n" + 
-			"...............\n" + 
-			"...............\n" + 
-			"...............\n" + 
-			"...............\n" + 
-			"...............\n" + 
-			".......V.......\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
-	   }
-
 	  
 
 	   @Test(expected = HorsEspaceJeuException.class)
@@ -295,5 +282,129 @@ public class SpaceInvadersTest {
 	        "...............\n" + 
 	        ".....VVVVVVV...\n" + 
 	        ".....VVVVVVV...\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+	    }
+	    
+	    @Test
+	    public void test_UnNouveauEnvahisseurPositionneHorsEspaceJeu_DoitLeverUneException() {
+
+		try {
+		    spaceinvaders.positionnerUnNouveauEnvahisseur(new Dimension(1,1), new Position(15,9), 1);
+		    fail("Position trop à droite : devrait déclencher une exception HorsEspaceJeuException");
+		} catch (final HorsEspaceJeuException e) {
+		}
+
+
+		try {
+		    spaceinvaders.positionnerUnNouveauEnvahisseur(new Dimension(1,1), new Position(-1,9), 1);
+		    fail("Position trop à gauche : devrait déclencher une exception HorsEspaceJeuException");
+		} catch (final HorsEspaceJeuException e) {
+		}
+
+
+		try {
+		    spaceinvaders.positionnerUnNouveauEnvahisseur(new Dimension(1,1), new Position(14,10), 1);
+		    fail("Position trop en bas : devrait déclencher une exception HorsEspaceJeuException");
+		} catch (final HorsEspaceJeuException e) {
+		}
+
+
+		try {
+		    spaceinvaders.positionnerUnNouveauEnvahisseur(new Dimension(1,1), new Position(14,-1), 1);
+		    fail("Position trop à haut : devrait déclencher une exception HorsEspaceJeuException");
+		} catch (final HorsEspaceJeuException e) {
+		}
+
+	    }
+	    
+	    @Test
+	    public void test_unNouveauEnvahisseurAvecUneDimensionEstCorrectementPositionneDansEspaceJeu() {
+		spaceinvaders.positionnerUnNouveauEnvahisseur(new Dimension(2,2),new Position(7,3), 1);
+		assertEquals("" + 
+			"...............\n" + 
+			"...............\n" +
+			".......EE......\n" + 
+			".......EE......\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+	    }
+	    
+	    @Test
+	    public void test_EnvahisseurAvance_DeplacerEnvahisseurVersLaGauche() {
+
+		spaceinvaders.positionnerUnNouveauEnvahisseur(new Dimension(2,2),new Position(7,3), 1);
+		spaceinvaders.deplacerEnvahisseurVersLaGauche();
+
+		assertEquals("" + 
+			"...............\n" + 
+			"...............\n" +
+			"......EE.......\n" + 
+			"......EE.......\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+	    }
+	    
+	    @Test
+	    public void test_EnvahisseurAvance_DeplacerEnvahisseurVersLaDroite() {
+
+		spaceinvaders.positionnerUnNouveauEnvahisseur(new Dimension(2,2),new Position(7,3), 1);
+		spaceinvaders.deplacerEnvahisseurVersLaDroite();
+
+		assertEquals("" + 
+			"...............\n" + 
+			"...............\n" +
+			"........EE.....\n" + 
+			"........EE.....\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+	    }
+	    
+	    @Test
+	    public void test_EnvahisseurAvance_EnvahisseurFaitDemiTourQuandIlToucheLeBordDroit() {
+
+		spaceinvaders.positionnerUnNouveauEnvahisseur(new Dimension(2,2),new Position(13,3), 1);
+		spaceinvaders.deplacerEnvahisseur();
+
+		assertEquals("" + 
+			"...............\n" + 
+			"...............\n" +
+			"............EE.\n" + 
+			"............EE.\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+	    }
+	    
+	    @Test
+	    public void test_EnvahisseurAvance_EnvahisseurFaitDemiTourQuandIlToucheLeBordGauche() {
+
+		spaceinvaders.positionnerUnNouveauEnvahisseur(new Dimension(2,2),new Position(0,3), 1);
+		spaceinvaders.deplacerEnvahisseur();
+
+		assertEquals("" + 
+			"...............\n" + 
+			"...............\n" +
+			".EE............\n" + 
+			".EE............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 	    }
 }

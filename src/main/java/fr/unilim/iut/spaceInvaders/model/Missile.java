@@ -1,4 +1,4 @@
-package fr.unilim.iut.spaceInvaders;
+package fr.unilim.iut.spaceInvaders.model;
 
 public class Missile extends Sprite {
 
