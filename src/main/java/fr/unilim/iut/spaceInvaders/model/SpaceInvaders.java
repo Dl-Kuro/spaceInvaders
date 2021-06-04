@@ -8,9 +8,11 @@ public class SpaceInvaders implements Jeu {
 
 	int longueur;
 	int hauteur;
+	boolean partieFinie = false;
 	Vaisseau vaisseau;
 	Missile missile;
 	Envahisseur envahisseur;
+	Collision collision = new Collision();
 
 	public SpaceInvaders(int longueur, int hauteur) {
 		this.longueur = longueur;
@@ -35,7 +37,7 @@ public class SpaceInvaders implements Jeu {
 		else if (this.aUnMissileQuiOccupeLaPosition(x, y))
 			marque = Constante.MARQUE_MISSILE;
 		else if (this.aUnEnvahisseurQuiOccupeLaPosition(x, y))
-		    marque = Constante.MARQUE_ENVAHISSEUR;
+			marque = Constante.MARQUE_ENVAHISSEUR;
 		else
 			marque = Constante.MARQUE_VIDE;
 		return marque;
@@ -182,15 +184,23 @@ public class SpaceInvaders implements Jeu {
 		if (this.aUnEnvahisseur()) {
 			this.deplacerEnvahisseur();
 		}
+		if (this.aUnEnvahisseur() && this.aUnMissile()) {
+			if (this.collision.detecterCollision(this.recupererMissile(), this.recupererEnvahisseur())) {
+				this.envahisseur=null;
+				this.missile=null;
+				this.vaisseau=null;
+				partieFinie=true;
+			}
+		}
 	}
 
 	@Override
-	public boolean etreFini() {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean partieFinie() {
+		return partieFinie;
 	}
 
 	public void initialiserJeu() {
+		partieFinie = false;
 		Position positionVaisseau = new Position(this.longueur / 2, this.hauteur - 1);
 		Dimension dimensionVaisseau = new Dimension(Constante.VAISSEAU_LONGUEUR, Constante.VAISSEAU_HAUTEUR);
 		Position positionEnvahisseur = new Position(this.longueur / 2,

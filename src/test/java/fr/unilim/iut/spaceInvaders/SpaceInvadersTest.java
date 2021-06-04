@@ -5,6 +5,7 @@ import static org.junit.Assert.fail;
 import org.junit.Before;
 import org.junit.Test;
 
+import fr.unilim.iut.spaceInvaders.model.Collision;
 import fr.unilim.iut.spaceInvaders.model.Dimension;
 import fr.unilim.iut.spaceInvaders.model.Position;
 import fr.unilim.iut.spaceInvaders.model.SpaceInvaders;
@@ -13,10 +14,12 @@ import fr.unilim.iut.spaceInvaders.utils.*;
 public class SpaceInvadersTest {
 
 	private SpaceInvaders spaceinvaders;
+	private Collision collision;
 
 	@Before
 	public void initialisation() {
 		spaceinvaders = new SpaceInvaders(15, 10);
+		collision = new Collision();
 	}
 
 	@Test
@@ -407,4 +410,23 @@ public class SpaceInvadersTest {
 			"...............\n" + 
 			"...............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 	    }
+	    
+	    @Test 
+		  public void test_unNouvelEnvahisseurAvecDimensionEtUnNouveauVaisseauEtUnMissileSontCorrectementPositionneDansEspaceJeu() {
+			  spaceinvaders.positionnerUnNouveauEnvahisseur(new Dimension(3,2),new Position(7,1), 1);
+				spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(7,2),new Position(5,9), 1);
+				spaceinvaders.tirerUnMissile(new Dimension(3,2),2);
+
+				assertEquals("" + 
+					       ".......EEE.....\n" + 
+					       ".......EEE.....\n" +
+					       "...............\n" + 
+					       "...............\n" + 
+					       "...............\n" + 
+					       "...............\n" + 
+					       ".......MMM.....\n" + 
+					       ".......MMM.....\n" + 
+					       ".....VVVVVVV...\n" + 
+					       ".....VVVVVVV...\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+		  }
 }
