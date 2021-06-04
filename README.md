@@ -188,10 +188,16 @@ Aucun
 
 - Etape n°4 : Faire en sorte que l'envahisseur fasse des aller-retours entre la droite et la gauche
 
+#### Fonctionnalité n°6 : Détecter une collision
+- Etape n°1 : Détection de collision entre deux sprites
+
+- Etape n°2 : Action après collision
+
+#### Fonctionnalité n°7 : Terminer la partie
+- Etape n°1 : Arrêt de la partie Si il n'y a plus d'envahisseurs
 
 
 ### Fonctionnalité en cours d’implémentation : 
-Fonctionnalité n°6
 
 
 ### Diagramme de classes 
@@ -220,10 +226,9 @@ Aucun
 
 * **Missile** :  projectile envoyé à la verticale par le vaisseau vers l'envahisseur dans le but de le détruire.
 
-* **Personnage** :  Etre fictif et virtuel, contrôlé ou non par le joueur, qui apparaît dans un jeu vidéo.
-
 * **Sprite**  :  Elément graphique qui peut se deplacer sur l'ecran. Identifie les personnages et les objets qui se superposent au fond d'ecran et qui se deplassent.
 
+* **Collision**  :  Une collision survient quand deux sprites se trouvent à la même position.
 
 La définition des termes métiers relatifs au projet doit se trouver dans le glossaire 
 Ce glossaire doit être compléter au fil des séances...
